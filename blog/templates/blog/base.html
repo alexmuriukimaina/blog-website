@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<title>Page</title>
+</head>
+<body>
+    <h1 class="mainheader"><p><a href="{% url 'post_list' %}">Published Stories</a></p></h1>
+    <div class="plus">
+        <div class="plus_text"><a href="{% url 'post_new' %}">Add story +</a></div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
